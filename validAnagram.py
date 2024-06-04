@@ -9,11 +9,10 @@ class Solution(object):
         if len(s) != len(t):
             return False
 
-        #Counter counts the frequency of each element within the dataset
-        from collections import Counter
+        count_s, count_t = {}, {}
 
-        count_s = Counter(s)
-        count_t = Counter(t)
-
+        for i in range (len(s)):
+            count_s[s[i]] = 1 + count_s.get[s[i], 0]
+            count_t[t[i]] = 1 + count_s.get[t[i], 0]
         return count_s == count_t
         
